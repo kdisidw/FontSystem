@@ -29,9 +29,43 @@
 				font-size: 120px;
 				color: blue;
 			}
+			
+			.gradient-mask-shadow-content {
+				font-family: AFPatternsRegular, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 90px;
+			    text-shadow: -3px 0 4px #006;
+			    position: relative;
+			    
+			    margin: 0;
+			    padding: 0;
+			    border: 0;
+			}
+			
+			.gradient-mask-shadow-content:after {
+				content: 'M';
+				color: #000;
+			}
+			
+			.gradient-mask-shadow-content a:link,
+			.gradient-mask-shadow-content a:hover,
+			.gradient-mask-shadow-content a:visited,
+			.gradient-mask-shadow-content a:active {
+				margin: 0;
+			    padding: 0;
+			    border: 0;
+			    
+				color: #d12;
+	    		text-decoration: none;
+	    		position: absolute;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
 		</style>
 	</head>
 	<body>
+		<div>
+			<div class="gradient-mask-shadow-content"><a href="#">M</a></div><div class="gradient-mask-shadow-content"><a href="#">M</a></div>
+		</div>
 		<div>
 			<h1>AFPatternsRegular</h1>
 			<span class="icon-afpatternregular">a</span>a

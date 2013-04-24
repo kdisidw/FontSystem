@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>CSS文字渐变</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style type="text/css">			
+			h1 {
+				margin: 0;
+				padding: 20px;
+			}
+			.gradient-single {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			}
+			
+			.gradient-single a:link,
+			.gradient-single a:hover,
+			.gradient-single a:visited,
+			.gradient-single a:active {
+				color: #d12;
+	    		text-decoration: none;
+			}
+			
+			.gradient-mask {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			}
+			
+			.gradient-mask a:link,
+			.gradient-mask a:hover,
+			.gradient-mask a:visited,
+			.gradient-mask a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+			
+			.gradient-mask-shadow {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			    text-shadow: -3px 0 4px #006;
+			}
+			
+			.gradient-mask-shadow a:link,
+			.gradient-mask-shadow a:hover,
+			.gradient-mask-shadow a:visited,
+			.gradient-mask-shadow a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+			
+			.gradient-mask-shadow-content {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			    text-shadow: -3px 0 4px #006;
+			    position: relative;
+			}
+			
+			.gradient-mask-shadow-content:after {
+				content: 'Jiangyujie';
+				color: #000;
+			}
+			
+			.gradient-mask-shadow-content a:link,
+			.gradient-mask-shadow-content a:hover,
+			.gradient-mask-shadow-content a:visited,
+			.gradient-mask-shadow-content a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		position: absolute;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+			
+			.gradient-mask-shadow-content-mask {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			    text-shadow: -3px 0 4px #006;
+			    position: relative;
+			}
+			
+			.gradient-mask-shadow-content-mask:after {
+				content: "Jiangyujie";
+				color: #000;
+         		text-shadow: 3px 3px 1px #600;
+			}
+			
+			.gradient-mask-shadow-content-mask a:link,
+			.gradient-mask-shadow-content-mask a:hover,
+			.gradient-mask-shadow-content-mask a:visited,
+			.gradient-mask-shadow-content-mask a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		position: absolute;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+			
+			.gradient-mask-shadow-content-mask-backimg {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			    text-shadow: -3px 0 4px #006;
+			    position: relative;
+			    background: url(玫瑰背景2.jpg);
+			}
+			
+			.gradient-mask-shadow-content-mask-backimg:after {
+				content: "Jiangyujie";
+				color: #000;
+         		text-shadow: 3px 3px 1px #600;
+			}
+			
+			.gradient-mask-shadow-content-mask-backimg a:link,
+			.gradient-mask-shadow-content-mask-backimg a:hover,
+			.gradient-mask-shadow-content-mask-backimg a:visited,
+			.gradient-mask-shadow-content-mask-backimg a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		position: absolute;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+			
+			.gradient-mask-shadow-content-mask-backgradient {
+				font-family: Segoe UI, Verdana, sans-serif;
+			    font-size: 100px;
+			    line-height: 100px;
+			    text-shadow: -3px 0 4px #006;
+			    position: relative;
+			    background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%);
+			    background: linear-gradient(45deg,#020031 0%,#6d3353 100%);			    
+			}
+			
+			.gradient-mask-shadow-content-mask-backgradient:after {
+				content: "Jiangyujie";
+				color: #000;
+         		text-shadow: 3px 3px 1px #600;
+			}
+			
+			.gradient-mask-shadow-content-mask-backgradient a:link,
+			.gradient-mask-shadow-content-mask-backgradient a:hover,
+			.gradient-mask-shadow-content-mask-backgradient a:visited,
+			.gradient-mask-shadow-content-mask-backgradient a:active {
+				color: #d12;
+	    		text-decoration: none;
+	    		position: absolute;
+	    		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="color:red;text-align:center">CSS文字渐变，目前只支持webkit</h1>
+		<h4>http://www.cnblogs.com/android-html5/archive/2011/02/28/2533773.html</h4>
+		<div style="border:2px solid #000">
+			<h1>单色渐变文字</h1>
+			<h1 class="gradient-single"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask遮罩效果</h1>
+			<h1 class="gradient-mask"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask+shadow效果</h1>
+			<h1 class="gradient-mask-shadow"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask+shadow+content伪类渐变颜色效果,不能通过设置文字颜色为渐变来实现文字颜色渐变为另外一种颜色的效果,关键点是: position 的 relative 和 absolute</h1>
+			<h1 class="gradient-mask-shadow-content"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask+shadow+content伪类渐变颜色+contentMask 的立体效果</h1>
+			<h1 class="gradient-mask-shadow-content-mask"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask+shadow+content伪类渐变颜色+contentMask+背景图片 的立体效果</h1>
+			<h1 class="gradient-mask-shadow-content-mask-backimg"><a href="#">Jiangyujie</a></h1>
+		</div>
+		<div style="border:2px solid #000">
+			<h1>文字叠加mask+shadow+content伪类渐变颜色+contentMask+背景渐变 的立体效果</h1>
+			<h1 class="gradient-mask-shadow-content-mask-backgradient"><a href="#">Jiangyujie</a></h1>
+		</div>
+	</body>
+</html>
